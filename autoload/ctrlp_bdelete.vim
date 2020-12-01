@@ -4,7 +4,7 @@
 "   call ctrlp_bdelete#init()
 " to your ~/.vimrc to initialize the ctrlp settings.
 "
-" When installed, you can use <C-@> in the ctrlp finder to delete open
+" When installed, you can use <C-_> in the ctrlp finder to delete open
 " buffers. This also works for buffers marked with <C-z>.
 "
 " =============================================================================
@@ -36,7 +36,7 @@ function! ctrlp_bdelete#mappings(...)
     call call(s:ctrlp_bdelete_user_func, a:000)
   endif
 
-  nnoremap <buffer> <silent> <c-@> :call <sid>DeleteMarkedBuffers()<cr>
+  nnoremap <buffer> <silent> <c-_> :call <sid>DeleteMarkedBuffers()<cr>
 endfunction
 
 function! s:DeleteMarkedBuffers()
